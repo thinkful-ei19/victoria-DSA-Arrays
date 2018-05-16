@@ -63,8 +63,22 @@ function merge(arr1, arr2){
       i++
     }
   }
-  
+
   return ans
 }
 
 console.log(merge([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]))
+
+///
+
+function removeChar(str, char){
+  for (let i = 0; i < str.length; i++) {
+    if (char.includes(str[i])){
+      str =str.slice(0, i) + str.slice(i + 1, str.length)
+      i--
+    }
+  }
+  return str
+}
+
+console.log(removeChar('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'))
