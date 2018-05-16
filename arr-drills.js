@@ -82,3 +82,20 @@ function removeChar(str, char){
 }
 
 console.log(removeChar('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'))
+
+//
+function Products(arr){
+  let ans = [];
+  for (let i = 0; i <= arr.length-1; i++){
+    let num = 1;
+    for (let j = 0; j < arr.length; j++){
+      if (arr[i] != arr[j]){
+        num *= arr[j]
+      }
+    }
+    ans.push(num)
+  }
+  return ans
+}
+
+console.log(Products([1, 3, 9, 4]))
