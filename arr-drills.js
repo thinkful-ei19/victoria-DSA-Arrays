@@ -99,3 +99,39 @@ function Products(arr){
 }
 
 console.log(Products([1, 3, 9, 4]))
+
+//
+
+function dimentionalArr(arrays){
+  let indxs = []
+  arrays = arrays.map(array => {
+    let hasZero = false;
+
+    for (let i = 0; i <= array.length; i++) {
+      if (array[i] === 0) {
+        indxs.push(i)
+        hasZero = true
+      }
+    }
+
+    if (hasZero) return Array(array.length).fill(0)
+    return array
+  })
+  indxs.forEach(i => {
+    arrays = changeCol(arrays, i)
+  })
+return arrays
+}
+
+function changeCol(arrays, indx){
+  return arrays.map(array => {
+    array[indx] = 0;
+    return array;
+  })
+}
+
+console.log(dimentionalArr([[1,0,1,1,0],
+[0,1,1,1,0],
+[1,1,1,1,1],
+[1,0,1,1,1],
+[1,1,1,1,1]]))
