@@ -135,3 +135,11 @@ console.log(dimentionalArr([[1,0,1,1,0],
 [1,1,1,1,1],
 [1,0,1,1,1],
 [1,1,1,1,1]]))
+
+//
+
+function rotation(srt1, str2){
+  return (str2 + str2).indexOf(srt1) > -1;
+}
+
+console.log(rotation('amazon', 'azonam'))
